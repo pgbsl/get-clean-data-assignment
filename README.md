@@ -40,7 +40,7 @@ The script has been broken into several functions (and sub functions), to improv
 
 ### activitiesAsFactor
 
-The activity_labels.txt file contains textual desriptions of the activity identifier that are used in the test and train datasets.  This file is parsed and the activity labels are converted to factors (where the index number for each factor corresponds to the activity number used in the dataset.  It is these labels that we will use in the tidy data set
+The activity_labels.txt file contains textual desriptions of the activity identifier that are used in the test and train datasets.  This file is parsed and the activity labels are converted to factors (where the index number for each factor corresponds to the activity number used in the dataset).  It is these labels that we will use in the tidy data set
 
 ### trainDataSetWithActivityAndSubject & testDataSetWithActivityAndSubject
 
