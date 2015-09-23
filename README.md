@@ -58,7 +58,16 @@ The test and train datasets are merged together using the rbind() function (i.e.
 
 Once merged, the columns of interest are extracted (The columns of interest are the meanAndStdDevFeatures, as described above, as well as the final two columns, containing activity and subject)
 
-The final step (this function is doing slightly too much, but I din't want to make the functions too fine grained) is to use the names extracted from the features file, to label the columns.
+The final step (this function is doing slightly too much, but I din''t want to make the functions too fine grained) is to use the names extracted from the features file, to label the columns.
 
 Please note that the requirement was to "Appropriately label the data set with descriptive variable names.".  I feel that the names in the features file are descriptive and meaningful in the domain of this trial, so plain English titles were not needed.  I could not add more context to the column names than provided in the features file.
 
+### averageAllColumnsByActivityAndSubject
+
+The final step was to take the dataset produce in the previous step and 'tidy' it up.  The final dataset should contain an average for each feature variable (grouped by activity and subject).
+
+To do this the 'group_by' function was used against the dataset.  The results of this group by where then processed by the summarise_each function (using 'mean' to carry out the summary).
+
+A file was then output with this tidy set (assignment-output.txt).  This was the assignment submission file.
+
+The function itself also returned this tidy dataset.
